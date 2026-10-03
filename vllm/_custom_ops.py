@@ -2226,6 +2226,7 @@ def topk_softmax(
     gating_output: torch.Tensor,
     renormalize: bool = False,
     e_score_correction_bias: torch.Tensor | None = None,
+    is_padding: torch.Tensor | None = None,
 ) -> None:
     torch.ops._moe_C.topk_softmax(
         topk_weights,
@@ -2234,6 +2235,7 @@ def topk_softmax(
         gating_output,
         renormalize,
         e_score_correction_bias,
+        is_padding,
     )
 
 
